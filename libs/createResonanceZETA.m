@@ -1,15 +1,17 @@
 function sys_out = createResonanceZETA(f_n, zeta, k)
     %CREATERESONANCEZETA  周波数 f0 (Hz) を中心周波数とする共振要素の伝達関数を返す
     %
+    % 構文:
     % sys  = createResonanceZETA(f_n, zeta, k);
     %
     % 入力:
     %   f_n: 中心周波数 (Hz)
     %   zeta: 減衰比 (0 < zeta < 1)
-    %   K: ゲイン
+    %   k: ゲイン
     % 出力:
     %   sys - MATLAB Control System Toolbox の tf オブジェクト
     %
+    % 補足:
     % Q値を指定する場合はcreateResonanceQFを使用
 
     arguments
