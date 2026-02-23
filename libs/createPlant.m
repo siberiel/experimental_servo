@@ -30,7 +30,7 @@ function sys = createPlant(m, k, c)
 
     % 入力値のバリデーション
     validateattributes(m, {'numeric'}, {'positive', 'scalar'}, mfilename, 'm');
-    validateattributes(k, {'numeric'}, {'positive', 'scalar'}, mfilename, 'k');
+    validateattributes(k, {'numeric'}, {'nonnegative', 'scalar'}, mfilename, 'k');
     validateattributes(c, {'numeric'}, {'nonnegative', 'scalar'}, mfilename, 'c');
 
     % 状態空間表現の係数行列
