@@ -2,15 +2,15 @@ function sys_out = createPlant(m, k, c)
     %CREATEPLANT バネマスダンパ系の線形システムオブジェクトを作成
     %
     % 構文:
-    %   sys = createPlant(m, k, c);
+    % sys = createPlant(m, k, c);
     %
-    % 入力パラメータ:
-    %   m  - 質量 (kg)
-    %   k  - ばね定数 (N/m)
-    %   c  - ダンパ定数 (N·s/m)
+    % 入力:
+    %   m: 質量 (kg)
+    %   k: ばね定数 (N/m)
+    %   c: ダンパ定数 (N·s/m)
     %
     % 出力:
-    %   sys - 線形システムオブジェクト (ss)
+    %   sys: 線形システムオブジェクト (ss)
     %
     % 説明:
     %   バネマスダンパ系の微分方程式:
