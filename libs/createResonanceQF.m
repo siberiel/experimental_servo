@@ -23,7 +23,7 @@ function sys_out = createResonanceQF(f_n, qf, k)
     omega_n = 2 * pi * f_n; % 角周波数に変換
 
     % 二次系の標準形伝達関数を作成
-    num = [k * omega_n^2];
+    num = k * omega_n^2;
     den = [1, 1/qf * omega_n, omega_n^2];
 
     sys_out = tf(num, den);

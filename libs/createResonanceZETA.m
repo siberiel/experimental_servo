@@ -23,7 +23,7 @@ function sys_out = createResonanceZETA(f_n, zeta, k)
     omega_n = 2 * pi * f_n; % 角周波数に変換
 
     % 二次系の標準形伝達関数を作成
-    num = [k * omega_n^2];
+    num = k * omega_n^2;
     den = [1, 2 * zeta * omega_n, omega_n^2];
 
     sys_out = tf(num, den);
