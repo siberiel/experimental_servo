@@ -17,7 +17,8 @@
     sys_plant = createPlant(mass, spring, damping);
     sys_res1 = createResonanceQF(1000, 10, 1.5);
     sys_ares1 = createAntiResQF(900, 100, 1, 1);
+    sys_plant_res = sys_plant * sys_res1 * sys_ares1;
     hold on
     bodeplot(sys_plant);
-    bodeplot(sys_plant * sys_res1 * sys_ares1);
+    bodeplot(sys_plant_res);
     hold off
