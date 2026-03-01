@@ -5,9 +5,10 @@
 
     % メカパラメータ
     mass = 3.5; % 3.5kg = 100[mm] * 100[mm] * 50[mm] * 2.7*10^3[kg/m^3]想定
-    spring = 5e5; % 転がりガイド想定
-    % damping = 800; % 減衰比3%, c[Ns/m] = 2 * zeta * sqrt(mass * spring) = 2 * 0.03 * sqrt(3.5 * 5e7)
-    damping = 80; % 減衰比3%, c[Ns/m] = 2 * zeta * sqrt(mass * spring) = 2 * 0.03 * sqrt(3.5 * 5e7)
+    spring = 0; % 十分に剛性はあるものとして k = 0
+    damping = 10;
+    % 粘性抵抗はF=cvとして、定格速度0.5m/sで5N程度生じると仮定すると
+    % c = 5[N]/0.5[m/s] = 10 [Ns/m]
 
     % !将来的に追加したい要素
     % 動摩擦係数: 0.005, ガイドの転がり摩擦
