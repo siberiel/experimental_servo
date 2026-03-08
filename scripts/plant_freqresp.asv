@@ -44,7 +44,7 @@
 
     % サーボアンプの導入
     k_amp = 10;
-    tau = 1 * 1e-3; % 1ms
+    tau = 1 * 1e-3; % 100us
     sys_amp = createAmp(k_amp, tau);
     bp3_1 = bodeplot(sys_amp);
     bp3_1.XLimits = [1e-2 1e2];
@@ -57,8 +57,8 @@
     bp3_2 = bodeplot(sys_plant * sys_motor * sys_amp);
     bp3_2.XLimits = [1e-2 1e2];
     bp3_2.YLimits(1) = {[-150 50]};
-    bp3_2.YLimits(2) = {[-185 185]};
-    bp3_2.PhaseWrappingEnabled = "on";
+    bp3_2.YLimits(2) = {[-185 5]};
+    bp3_2.Phase
     fontsize(16,"points");
     title("Frequency Response: Amp + Motor + Plant");
     saveas(bp3_2,"docs/plant_scaling/ampplant_frd.png");
